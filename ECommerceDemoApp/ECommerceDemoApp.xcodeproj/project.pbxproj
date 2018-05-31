@@ -1,0 +1,810 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10672CADEE81C2BAA9433D84 /* Pods_ECommerceDemoAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED7038DE95100B20EF2F4001 /* Pods_ECommerceDemoAppUITests.framework */; };
+		7AA818EC21F2984DAE69A2C4 /* Pods_ECommerceDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C22C89F638B8A23B5C0F4F /* Pods_ECommerceDemoApp.framework */; };
+		828A0C6984A65B6ACB36F6D0 /* Pods_ECommerceDemoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39F7BE8FEB3584214589372B /* Pods_ECommerceDemoAppTests.framework */; };
+		EC8E2D9220BFF06300FC98D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC8E2D9020BFF06300FC98D3 /* Main.storyboard */; };
+		EC8E2D9420BFF06300FC98D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC8E2D9320BFF06300FC98D3 /* Assets.xcassets */; };
+		EC8E2D9720BFF06300FC98D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC8E2D9520BFF06300FC98D3 /* LaunchScreen.storyboard */; };
+		EC8E2DA220BFF06300FC98D3 /* ECommerceDemoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8E2DA120BFF06300FC98D3 /* ECommerceDemoAppTests.swift */; };
+		EC8E2DAD20BFF06300FC98D3 /* ECommerceDemoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8E2DAC20BFF06300FC98D3 /* ECommerceDemoAppUITests.swift */; };
+		ECEAD61D20C008B700DCC8B7 /* ApplicationConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAD61C20C008B700DCC8B7 /* ApplicationConstants.swift */; };
+		ECEAD62020C00A2400DCC8B7 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAD61F20C00A2400DCC8B7 /* UIViewControllerExtension.swift */; };
+		ECEAD62220C00A3600DCC8B7 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAD62120C00A3600DCC8B7 /* StoryboardExtension.swift */; };
+		ECEAD63920C0128300DCC8B7 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAD63820C0128300DCC8B7 /* Products.swift */; };
+		ECEAD63C20C015F200DCC8B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAD63B20C015F200DCC8B7 /* AppDelegate.swift */; };
+		ECEAD63E20C0166F00DCC8B7 /* ProductCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAD63D20C0166F00DCC8B7 /* ProductCategoryVC.swift */; };
+		ECEAD64020C0168500DCC8B7 /* ProductRankingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAD63F20C0168500DCC8B7 /* ProductRankingVC.swift */; };
+		ECEAD64320C018B200DCC8B7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAD64220C018B200DCC8B7 /* NetworkManager.swift */; };
+		ECEAD64520C018DA00DCC8B7 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAD64420C018DA00DCC8B7 /* CustomViewController.swift */; };
+		ECEAD64720C019AB00DCC8B7 /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAD64620C019AB00DCC8B7 /* NavigationHelper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC8E2D9E20BFF06300FC98D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC8E2D7F20BFF06200FC98D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC8E2D8620BFF06300FC98D3;
+			remoteInfo = ECommerceDemoApp;
+		};
+		EC8E2DA920BFF06300FC98D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC8E2D7F20BFF06200FC98D3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC8E2D8620BFF06300FC98D3;
+			remoteInfo = ECommerceDemoApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D16941E936EDA011FD80F61 /* Pods-ECommerceDemoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECommerceDemoAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ECommerceDemoAppTests/Pods-ECommerceDemoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		38B72354297BC1AF942E8876 /* Pods-ECommerceDemoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECommerceDemoAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ECommerceDemoAppTests/Pods-ECommerceDemoAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		39F7BE8FEB3584214589372B /* Pods_ECommerceDemoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ECommerceDemoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DBD5368392EEB02450A1A47 /* Pods-ECommerceDemoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECommerceDemoAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ECommerceDemoAppUITests/Pods-ECommerceDemoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		40C22C89F638B8A23B5C0F4F /* Pods_ECommerceDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ECommerceDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		482EB7F19654F857CE95C796 /* Pods-ECommerceDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECommerceDemoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ECommerceDemoApp/Pods-ECommerceDemoApp.release.xcconfig"; sourceTree = "<group>"; };
+		8E422AC697C85D8118C961CD /* Pods-ECommerceDemoAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECommerceDemoAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ECommerceDemoAppUITests/Pods-ECommerceDemoAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EC8E2D8720BFF06300FC98D3 /* ECommerceDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECommerceDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC8E2D9120BFF06300FC98D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EC8E2D9320BFF06300FC98D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC8E2D9620BFF06300FC98D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EC8E2D9820BFF06300FC98D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC8E2D9D20BFF06300FC98D3 /* ECommerceDemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECommerceDemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC8E2DA120BFF06300FC98D3 /* ECommerceDemoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECommerceDemoAppTests.swift; sourceTree = "<group>"; };
+		EC8E2DA320BFF06300FC98D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC8E2DA820BFF06300FC98D3 /* ECommerceDemoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ECommerceDemoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC8E2DAC20BFF06300FC98D3 /* ECommerceDemoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECommerceDemoAppUITests.swift; sourceTree = "<group>"; };
+		EC8E2DAE20BFF06300FC98D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECEAD61C20C008B700DCC8B7 /* ApplicationConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationConstants.swift; sourceTree = "<group>"; };
+		ECEAD61F20C00A2400DCC8B7 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		ECEAD62120C00A3600DCC8B7 /* StoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
+		ECEAD63820C0128300DCC8B7 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		ECEAD63B20C015F200DCC8B7 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ECEAD63D20C0166F00DCC8B7 /* ProductCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategoryVC.swift; sourceTree = "<group>"; };
+		ECEAD63F20C0168500DCC8B7 /* ProductRankingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRankingVC.swift; sourceTree = "<group>"; };
+		ECEAD64220C018B200DCC8B7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		ECEAD64420C018DA00DCC8B7 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		ECEAD64620C019AB00DCC8B7 /* NavigationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
+		ED7038DE95100B20EF2F4001 /* Pods_ECommerceDemoAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ECommerceDemoAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F898E154B9A8D2E7B51EB719 /* Pods-ECommerceDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECommerceDemoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ECommerceDemoApp/Pods-ECommerceDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC8E2D8420BFF06300FC98D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AA818EC21F2984DAE69A2C4 /* Pods_ECommerceDemoApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC8E2D9A20BFF06300FC98D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				828A0C6984A65B6ACB36F6D0 /* Pods_ECommerceDemoAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC8E2DA520BFF06300FC98D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10672CADEE81C2BAA9433D84 /* Pods_ECommerceDemoAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2FFCE6B2FBC81DEC796EC6C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40C22C89F638B8A23B5C0F4F /* Pods_ECommerceDemoApp.framework */,
+				39F7BE8FEB3584214589372B /* Pods_ECommerceDemoAppTests.framework */,
+				ED7038DE95100B20EF2F4001 /* Pods_ECommerceDemoAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8145AC4DCAD1E6BED003FCF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F898E154B9A8D2E7B51EB719 /* Pods-ECommerceDemoApp.debug.xcconfig */,
+				482EB7F19654F857CE95C796 /* Pods-ECommerceDemoApp.release.xcconfig */,
+				0D16941E936EDA011FD80F61 /* Pods-ECommerceDemoAppTests.debug.xcconfig */,
+				38B72354297BC1AF942E8876 /* Pods-ECommerceDemoAppTests.release.xcconfig */,
+				8E422AC697C85D8118C961CD /* Pods-ECommerceDemoAppUITests.debug.xcconfig */,
+				3DBD5368392EEB02450A1A47 /* Pods-ECommerceDemoAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC8E2D7E20BFF06200FC98D3 = {
+			isa = PBXGroup;
+			children = (
+				EC8E2D8920BFF06300FC98D3 /* ECommerceDemoApp */,
+				EC8E2DA020BFF06300FC98D3 /* ECommerceDemoAppTests */,
+				EC8E2DAB20BFF06300FC98D3 /* ECommerceDemoAppUITests */,
+				EC8E2D8820BFF06300FC98D3 /* Products */,
+				8145AC4DCAD1E6BED003FCF3 /* Pods */,
+				2FFCE6B2FBC81DEC796EC6C1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EC8E2D8820BFF06300FC98D3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC8E2D8720BFF06300FC98D3 /* ECommerceDemoApp.app */,
+				EC8E2D9D20BFF06300FC98D3 /* ECommerceDemoAppTests.xctest */,
+				EC8E2DA820BFF06300FC98D3 /* ECommerceDemoAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC8E2D8920BFF06300FC98D3 /* ECommerceDemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				ECEAD61B20C0087100DCC8B7 /* Constants */,
+				ECEAD64120C0189C00DCC8B7 /* Helpers */,
+				ECEAD63A20C0158F00DCC8B7 /* Main */,
+				ECEAD63120C0121800DCC8B7 /* MVC */,
+				ECEAD61E20C009A500DCC8B7 /* Utilities */,
+				EC8E2D9020BFF06300FC98D3 /* Main.storyboard */,
+				EC8E2D9320BFF06300FC98D3 /* Assets.xcassets */,
+				EC8E2D9520BFF06300FC98D3 /* LaunchScreen.storyboard */,
+				EC8E2D9820BFF06300FC98D3 /* Info.plist */,
+			);
+			path = ECommerceDemoApp;
+			sourceTree = "<group>";
+		};
+		EC8E2DA020BFF06300FC98D3 /* ECommerceDemoAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC8E2DA120BFF06300FC98D3 /* ECommerceDemoAppTests.swift */,
+				EC8E2DA320BFF06300FC98D3 /* Info.plist */,
+			);
+			path = ECommerceDemoAppTests;
+			sourceTree = "<group>";
+		};
+		EC8E2DAB20BFF06300FC98D3 /* ECommerceDemoAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EC8E2DAC20BFF06300FC98D3 /* ECommerceDemoAppUITests.swift */,
+				EC8E2DAE20BFF06300FC98D3 /* Info.plist */,
+			);
+			path = ECommerceDemoAppUITests;
+			sourceTree = "<group>";
+		};
+		ECEAD61B20C0087100DCC8B7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				ECEAD64620C019AB00DCC8B7 /* NavigationHelper.swift */,
+				ECEAD61C20C008B700DCC8B7 /* ApplicationConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		ECEAD61E20C009A500DCC8B7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				ECEAD61F20C00A2400DCC8B7 /* UIViewControllerExtension.swift */,
+				ECEAD62120C00A3600DCC8B7 /* StoryboardExtension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		ECEAD63120C0121800DCC8B7 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				ECEAD63420C0124900DCC8B7 /* Model */,
+				ECEAD63320C0124400DCC8B7 /* View */,
+				ECEAD63220C0123200DCC8B7 /* Controller */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		ECEAD63220C0123200DCC8B7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ECEAD63720C0126900DCC8B7 /* ProductSubCategoryVC */,
+				ECEAD63620C0126100DCC8B7 /* ProductRankingVC */,
+				ECEAD63520C0125000DCC8B7 /* ProductCategoryVC */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		ECEAD63320C0124400DCC8B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ECEAD63420C0124900DCC8B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECEAD63820C0128300DCC8B7 /* Products.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ECEAD63520C0125000DCC8B7 /* ProductCategoryVC */ = {
+			isa = PBXGroup;
+			children = (
+				ECEAD63D20C0166F00DCC8B7 /* ProductCategoryVC.swift */,
+			);
+			path = ProductCategoryVC;
+			sourceTree = "<group>";
+		};
+		ECEAD63620C0126100DCC8B7 /* ProductRankingVC */ = {
+			isa = PBXGroup;
+			children = (
+				ECEAD63F20C0168500DCC8B7 /* ProductRankingVC.swift */,
+			);
+			path = ProductRankingVC;
+			sourceTree = "<group>";
+		};
+		ECEAD63720C0126900DCC8B7 /* ProductSubCategoryVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ProductSubCategoryVC;
+			sourceTree = "<group>";
+		};
+		ECEAD63A20C0158F00DCC8B7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				ECEAD63B20C015F200DCC8B7 /* AppDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		ECEAD64120C0189C00DCC8B7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ECEAD64220C018B200DCC8B7 /* NetworkManager.swift */,
+				ECEAD64420C018DA00DCC8B7 /* CustomViewController.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC8E2D8620BFF06300FC98D3 /* ECommerceDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC8E2DB120BFF06300FC98D3 /* Build configuration list for PBXNativeTarget "ECommerceDemoApp" */;
+			buildPhases = (
+				52039D353381A0D11F41E652 /* [CP] Check Pods Manifest.lock */,
+				EC8E2D8320BFF06300FC98D3 /* Sources */,
+				EC8E2D8420BFF06300FC98D3 /* Frameworks */,
+				EC8E2D8520BFF06300FC98D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ECommerceDemoApp;
+			productName = ECommerceDemoApp;
+			productReference = EC8E2D8720BFF06300FC98D3 /* ECommerceDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC8E2D9C20BFF06300FC98D3 /* ECommerceDemoAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC8E2DB420BFF06300FC98D3 /* Build configuration list for PBXNativeTarget "ECommerceDemoAppTests" */;
+			buildPhases = (
+				94C49E804DCDD5FD8CAFB6B8 /* [CP] Check Pods Manifest.lock */,
+				EC8E2D9920BFF06300FC98D3 /* Sources */,
+				EC8E2D9A20BFF06300FC98D3 /* Frameworks */,
+				EC8E2D9B20BFF06300FC98D3 /* Resources */,
+				E73179158093B17C8B932F51 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC8E2D9F20BFF06300FC98D3 /* PBXTargetDependency */,
+			);
+			name = ECommerceDemoAppTests;
+			productName = ECommerceDemoAppTests;
+			productReference = EC8E2D9D20BFF06300FC98D3 /* ECommerceDemoAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EC8E2DA720BFF06300FC98D3 /* ECommerceDemoAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC8E2DB720BFF06300FC98D3 /* Build configuration list for PBXNativeTarget "ECommerceDemoAppUITests" */;
+			buildPhases = (
+				08E0D8744C5101B3C1768EE8 /* [CP] Check Pods Manifest.lock */,
+				EC8E2DA420BFF06300FC98D3 /* Sources */,
+				EC8E2DA520BFF06300FC98D3 /* Frameworks */,
+				EC8E2DA620BFF06300FC98D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC8E2DAA20BFF06300FC98D3 /* PBXTargetDependency */,
+			);
+			name = ECommerceDemoAppUITests;
+			productName = ECommerceDemoAppUITests;
+			productReference = EC8E2DA820BFF06300FC98D3 /* ECommerceDemoAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC8E2D7F20BFF06200FC98D3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Gaurang Makwana";
+				TargetAttributes = {
+					EC8E2D8620BFF06300FC98D3 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					EC8E2D9C20BFF06300FC98D3 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EC8E2D8620BFF06300FC98D3;
+					};
+					EC8E2DA720BFF06300FC98D3 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EC8E2D8620BFF06300FC98D3;
+					};
+				};
+			};
+			buildConfigurationList = EC8E2D8220BFF06300FC98D3 /* Build configuration list for PBXProject "ECommerceDemoApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC8E2D7E20BFF06200FC98D3;
+			productRefGroup = EC8E2D8820BFF06300FC98D3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC8E2D8620BFF06300FC98D3 /* ECommerceDemoApp */,
+				EC8E2D9C20BFF06300FC98D3 /* ECommerceDemoAppTests */,
+				EC8E2DA720BFF06300FC98D3 /* ECommerceDemoAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC8E2D8520BFF06300FC98D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC8E2D9720BFF06300FC98D3 /* LaunchScreen.storyboard in Resources */,
+				EC8E2D9420BFF06300FC98D3 /* Assets.xcassets in Resources */,
+				EC8E2D9220BFF06300FC98D3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC8E2D9B20BFF06300FC98D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC8E2DA620BFF06300FC98D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08E0D8744C5101B3C1768EE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ECommerceDemoAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52039D353381A0D11F41E652 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ECommerceDemoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94C49E804DCDD5FD8CAFB6B8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ECommerceDemoAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E73179158093B17C8B932F51 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ECommerceDemoAppTests/Pods-ECommerceDemoAppTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper+Realm/ObjectMapper_Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper_Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ECommerceDemoAppTests/Pods-ECommerceDemoAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC8E2D8320BFF06300FC98D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECEAD64520C018DA00DCC8B7 /* CustomViewController.swift in Sources */,
+				ECEAD62020C00A2400DCC8B7 /* UIViewControllerExtension.swift in Sources */,
+				ECEAD64020C0168500DCC8B7 /* ProductRankingVC.swift in Sources */,
+				ECEAD63920C0128300DCC8B7 /* Products.swift in Sources */,
+				ECEAD63E20C0166F00DCC8B7 /* ProductCategoryVC.swift in Sources */,
+				ECEAD64320C018B200DCC8B7 /* NetworkManager.swift in Sources */,
+				ECEAD61D20C008B700DCC8B7 /* ApplicationConstants.swift in Sources */,
+				ECEAD63C20C015F200DCC8B7 /* AppDelegate.swift in Sources */,
+				ECEAD62220C00A3600DCC8B7 /* StoryboardExtension.swift in Sources */,
+				ECEAD64720C019AB00DCC8B7 /* NavigationHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC8E2D9920BFF06300FC98D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC8E2DA220BFF06300FC98D3 /* ECommerceDemoAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC8E2DA420BFF06300FC98D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC8E2DAD20BFF06300FC98D3 /* ECommerceDemoAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC8E2D9F20BFF06300FC98D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC8E2D8620BFF06300FC98D3 /* ECommerceDemoApp */;
+			targetProxy = EC8E2D9E20BFF06300FC98D3 /* PBXContainerItemProxy */;
+		};
+		EC8E2DAA20BFF06300FC98D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC8E2D8620BFF06300FC98D3 /* ECommerceDemoApp */;
+			targetProxy = EC8E2DA920BFF06300FC98D3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC8E2D9020BFF06300FC98D3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC8E2D9120BFF06300FC98D3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EC8E2D9520BFF06300FC98D3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC8E2D9620BFF06300FC98D3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC8E2DAF20BFF06300FC98D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EC8E2DB020BFF06300FC98D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC8E2DB220BFF06300FC98D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F898E154B9A8D2E7B51EB719 /* Pods-ECommerceDemoApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ECommerceDemoApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swift.ECommerceDemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC8E2DB320BFF06300FC98D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 482EB7F19654F857CE95C796 /* Pods-ECommerceDemoApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ECommerceDemoApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swift.ECommerceDemoApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EC8E2DB520BFF06300FC98D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D16941E936EDA011FD80F61 /* Pods-ECommerceDemoAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ECommerceDemoAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swift.ECommerceDemoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ECommerceDemoApp.app/ECommerceDemoApp";
+			};
+			name = Debug;
+		};
+		EC8E2DB620BFF06300FC98D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38B72354297BC1AF942E8876 /* Pods-ECommerceDemoAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ECommerceDemoAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swift.ECommerceDemoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ECommerceDemoApp.app/ECommerceDemoApp";
+			};
+			name = Release;
+		};
+		EC8E2DB820BFF06300FC98D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E422AC697C85D8118C961CD /* Pods-ECommerceDemoAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ECommerceDemoAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swift.ECommerceDemoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ECommerceDemoApp;
+			};
+			name = Debug;
+		};
+		EC8E2DB920BFF06300FC98D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3DBD5368392EEB02450A1A47 /* Pods-ECommerceDemoAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ECommerceDemoAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.swift.ECommerceDemoAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ECommerceDemoApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC8E2D8220BFF06300FC98D3 /* Build configuration list for PBXProject "ECommerceDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC8E2DAF20BFF06300FC98D3 /* Debug */,
+				EC8E2DB020BFF06300FC98D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC8E2DB120BFF06300FC98D3 /* Build configuration list for PBXNativeTarget "ECommerceDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC8E2DB220BFF06300FC98D3 /* Debug */,
+				EC8E2DB320BFF06300FC98D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC8E2DB420BFF06300FC98D3 /* Build configuration list for PBXNativeTarget "ECommerceDemoAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC8E2DB520BFF06300FC98D3 /* Debug */,
+				EC8E2DB620BFF06300FC98D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC8E2DB720BFF06300FC98D3 /* Build configuration list for PBXNativeTarget "ECommerceDemoAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC8E2DB820BFF06300FC98D3 /* Debug */,
+				EC8E2DB920BFF06300FC98D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC8E2D7F20BFF06200FC98D3 /* Project object */;
+}
