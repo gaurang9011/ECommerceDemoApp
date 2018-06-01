@@ -183,9 +183,8 @@
 				ECEAD63420C0124900DCC8B7 /* Entity */,
 				ECEAD63220C0123200DCC8B7 /* DesignModules */,
 				ECEAD61E20C009A500DCC8B7 /* Utilities */,
-				EC8E2D9020BFF06300FC98D3 /* Main.storyboard */,
+				ECB5844520C189F2005F1AD8 /* Resource Files */,
 				EC8E2D9320BFF06300FC98D3 /* Assets.xcassets */,
-				EC8E2D9520BFF06300FC98D3 /* LaunchScreen.storyboard */,
 				EC8E2D9820BFF06300FC98D3 /* Info.plist */,
 			);
 			path = ECommerceDemoApp;
@@ -225,6 +224,15 @@
 			path = ProductDetailsVC;
 			sourceTree = "<group>";
 		};
+		ECB5844520C189F2005F1AD8 /* Resource Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC8E2D9520BFF06300FC98D3 /* LaunchScreen.storyboard */,
+				EC8E2D9020BFF06300FC98D3 /* Main.storyboard */,
+			);
+			path = "Resource Files";
+			sourceTree = "<group>";
+		};
 		ECEAD61B20C0087100DCC8B7 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,11 +255,11 @@
 		ECEAD63220C0123200DCC8B7 /* DesignModules */ = {
 			isa = PBXGroup;
 			children = (
-				ECB5843820C1517B005F1AD8 /* ProductDetailsVC */,
-				ECB5843720C1516C005F1AD8 /* ProductListVC */,
-				ECEAD63720C0126900DCC8B7 /* ProductSubCategoryVC */,
-				ECEAD63620C0126100DCC8B7 /* ProductRankingVC */,
 				ECEAD63520C0125000DCC8B7 /* ProductCategoryVC */,
+				ECEAD63720C0126900DCC8B7 /* ProductSubCategoryVC */,
+				ECB5843720C1516C005F1AD8 /* ProductListVC */,
+				ECB5843820C1517B005F1AD8 /* ProductDetailsVC */,
+				ECEAD63620C0126100DCC8B7 /* ProductRankingVC */,
 			);
 			path = DesignModules;
 			sourceTree = "<group>";
