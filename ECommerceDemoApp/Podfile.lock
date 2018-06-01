@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.2)
+  - EZLoadingActivity (1.01)
   - ObjectMapper (3.2.0)
   - "ObjectMapper+Realm (0.6)":
     - ObjectMapper
@@ -12,6 +13,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - EZLoadingActivity
   - ObjectMapper
   - "ObjectMapper+Realm"
   - RealmSwift
@@ -19,6 +21,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - EZLoadingActivity
     - ObjectMapper
     - "ObjectMapper+Realm"
     - Realm
@@ -26,11 +29,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  EZLoadingActivity: edd7e387e5197b116ce2cccb3fd747ababc2a510
   ObjectMapper: 5cccd2de6f253eda859df8116a5a554d9769e859
   "ObjectMapper+Realm": 4cf44ed3202a73f08594e21e13eb3f8aa9b5a664
   Realm: 08b464b462d4f31bbd4ba5f5a1c8722ef0a700b7
   RealmSwift: 973e1499c44ab571f894c2c908e2db450be280c3
 
-PODFILE CHECKSUM: c7722f6d74fa2d54eb535cf2fb35afd5b3c711c2
+PODFILE CHECKSUM: 2f06660cd5663c0407aa8e721a0a56b742b2548b
 
 COCOAPODS: 1.5.3

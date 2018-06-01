@@ -13,20 +13,20 @@ class ProductCategoryVC: CustomViewController  {
 
     @IBOutlet weak var tableView: UITableView!
     
+    //categories
+    var categories : [ProductCategory] = []
     
     // MARK: - Life Cycle
-    
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
         initializeController()
         setupUI()
     }
     
-    // MARK: - Custom methods
+    //Mark: Custom methods
     
-    /// This method is used to setup views and subviews when view loads.
+    // This method is used to setup views and subviews when view loads.
     func setupUI() {
         
         tableView.estimatedRowHeight = 55
@@ -34,41 +34,46 @@ class ProductCategoryVC: CustomViewController  {
         tableView.tableFooterView = UIView()
     }
     
-    // MARK: - initializeController
+    //initializeController
     func initializeController() {
         self.title = ApplicationTitles.categoryTitle
     }
-}
-
-// MARK: - UITableViewDataSource
-extension ProductCategoryVC: UITableViewDataSource {
-
-    // show main category as sections
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2 //categories.count
+    
+    //get categories at Index
+    func getCategoryAtIndex(index: Int) -> ProductCategory {
+        return self.categories[index]
     }
     
-    // show sub category as section rows
+    //get child categories at given index
+    func getChildCategoryAtIndexPath(indexPath: IndexPath ) -> ProductCategory {
+        let category = getCategoryAtIndex(index: indexPath.section)
+        return category.childCategories[indexPath.row]
+    }
+}
+
+//Mark: - UITableViewDataSource
+extension ProductCategoryVC: UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return categories.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        //let category = categoryAtIndex(index: section)
-        //return category.childCategories.count
-        return 4
+        let category = getCategoryAtIndex(index: section)
+        return category.childCategories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.subCategoryCell, for: indexPath)
-        
-        // set sub category details
-        //let subcategory = subCategoryAtIndexPath(indexPath: indexPath)
-        //cell.setProductSubCategoryDetails(subCategory: subcategory)
-        
+        let subcategory = getChildCategoryAtIndexPath(indexPath: indexPath)
+        cell.setProductSubCategoryDetails(subCategory: subcategory)
         return cell
     }
 }
 
-// MARK: - UITableViewDataSource
+//Mark: - UITableViewDataSource
 extension ProductCategoryVC: UITableViewDelegate {
     
 }

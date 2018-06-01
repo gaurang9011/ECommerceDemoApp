@@ -8,6 +8,11 @@
 
 import Foundation
 
+struct WebServiceURL {
+    
+    static let serviceURL = "https://stark-spire-93433.herokuapp.com/json"
+}
+
 /* Application Titles */
 struct ApplicationTitles {
     
