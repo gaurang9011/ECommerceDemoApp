@@ -15,6 +15,7 @@ class ProductCategoryRouter {
     
     func loadSubCategories(category: ProductCategory) {
         let subCategoryViewController = UIViewController.subCategoryViewController()
+        subCategoryViewController.selectedCategory = category
         viewControllerObject.navigationController?.pushViewController(subCategoryViewController, animated: true)
     }
 }
