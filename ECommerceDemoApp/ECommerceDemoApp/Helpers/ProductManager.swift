@@ -25,7 +25,8 @@ class ProductManager {
 // Save Products and Category
 extension ProductManager {
     
-    func saveProductCategory(products: [ProductCategory]) {
+    func saveCategoryWiseProducts(products: [ProductCategory]) {
+        
         let objRealm = try! Realm()
         try! objRealm.write {
             for objCategory in products {
@@ -38,19 +39,30 @@ extension ProductManager {
 // Get Products and Category
 extension ProductManager {
     
-    func getProductCategory() -> [ProductCategory] {
+    func getCategoryWiseProducts() -> [ProductCategory] {
         
-        let objRealm = try!Realm()
-        let categoryArray: [ProductCategory] = Array(objRealm.objects(ProductCategory.self))
+        let objRealm = try! Realm()
+        let categoryArray = Array(objRealm.objects(ProductCategory.self))
         
-        for  category in categoryArray {
+        productCategories = prepareCategoryWiseProducts(list: categoryArray)
+        return productCategories
+    }
+}
+
+extension ProductManager {
+    
+    private func prepareCategoryWiseProducts(list: [ProductCategory]) -> [ProductCategory] {
+        
+        for category in list {
+        
             for categoryId in category.childCategoryIds {
-                let child = categoryArray.first(where: {$0.categoryId == categoryId})
+                
+                let child = list.first(where: { $0.categoryId == categoryId })
                 category.childCategories.append(child!)
                 child?.hasParent = true
             }
         }
-        let rootNodes = categoryArray.filter({!$0.hasParent})
+        let rootNodes = list.filter({ !$0.hasParent })
         return rootNodes
     }
 }

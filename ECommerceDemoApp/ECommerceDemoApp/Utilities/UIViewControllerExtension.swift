@@ -11,8 +11,8 @@ import UIKit
 
 extension UIViewController {
     
-//    static func playerViewController() -> PlayerViewController {
-//        return UIStoryboard.player().instantiateViewController(withIdentifier: String(describing: PlayerViewController.self)) as! PlayerViewController
-//    }
+    static func subCategoryViewController() -> ProductSubCategoryVC {
+        return UIStoryboard.main().instantiateViewController(withIdentifier: String(describing: ProductSubCategoryVC.self)) as! ProductSubCategoryVC
+    }
     
 }

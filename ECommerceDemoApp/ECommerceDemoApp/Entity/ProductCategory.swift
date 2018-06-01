@@ -47,4 +47,8 @@ class ProductCategory: Object, Mappable  {
     }
     
     var hasParent:Bool = false
+    
+    override static func ignoredProperties() -> [String] {
+        return ["childCategories", "hasChildCategories", "hasParent"]
+    }
 }

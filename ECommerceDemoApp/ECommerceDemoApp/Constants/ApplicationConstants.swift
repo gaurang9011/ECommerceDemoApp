@@ -8,6 +8,17 @@
 
 import Foundation
 
+
+let keyCategories           = "categories"
+let keyCategoryId           = "categoryId"
+let keyMostOrderedProducts   = "Most OrdeRed Products"
+let keyMostViewedProducts    = "Most Viewed Products"
+let keyMostSharedProducts    = "Most Shared Products"
+let keyRankingName           = "ranking"
+let keyRankings              = "rankings"
+let keyProducts              = "products"
+
+
 struct WebServiceURL {
     
     static let serviceURL = "https://stark-spire-93433.herokuapp.com/json"
@@ -30,7 +41,7 @@ struct Messages {
 }
 
 /* Cell Identifiers */
-struct CellIdentifiers {
+struct TableViewCellIdentifiers {
     
     static let categoryCell         = "categoryCell"
     static let subCategoryCell      = "subCategoryCell"

@@ -88,11 +88,16 @@ extension NetworkManager {
     
     // Hide indicator
     func hideIndicator() {
-        EZLoadingActivity.show("Please wait...", disableUI: true)
+        DispatchQueue.main.async {
+            EZLoadingActivity.hide()
+        }
     }
     
     //SHow Indiactor
     func showIndicator() {
-        EZLoadingActivity.hide()
+        
+        DispatchQueue.main.async {
+            EZLoadingActivity.show("Please wait...", disableUI: true)
+        }
     }
 }

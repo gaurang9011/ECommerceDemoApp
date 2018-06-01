@@ -96,7 +96,6 @@ extension Product {
     }
 }
 
-// Ranking Product Model for displaying the data
 struct FeaturedProduct {
     
     var categoryId: Int

@@ -10,6 +10,7 @@ target 'ECommerceDemoApp' do
     pod 'ObjectMapper'
     pod 'ObjectMapper+Realm'
     pod 'EZLoadingActivity'
+    pod "RSLoadingView"
   # Pods for ECommerceDemoApp
 
   target 'ECommerceDemoAppTests' do
