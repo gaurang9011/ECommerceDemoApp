@@ -96,7 +96,7 @@ extension Product {
     }
 }
 
-struct FeaturedProduct {
+struct CategoryProduct {
     
     var categoryId: Int
     var categoryName: String

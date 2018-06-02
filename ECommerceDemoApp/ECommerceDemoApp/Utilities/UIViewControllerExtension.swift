@@ -18,4 +18,8 @@ extension UIViewController {
     static func productListViewController() -> ProductListVC {
         return UIStoryboard.main().instantiateViewController(withIdentifier: String(describing: ProductListVC.self)) as! ProductListVC
     }
+    
+    static func productDetailViewController() -> ProductDetailsVC {
+        return UIStoryboard.main().instantiateViewController(withIdentifier: String(describing: ProductDetailsVC.self)) as! ProductDetailsVC
+    }
 }

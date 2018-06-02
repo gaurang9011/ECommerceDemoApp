@@ -83,8 +83,9 @@ extension ProductCategoryVC: ProductCategoryDelegate {
 }
 
 //Mark: - UITableViewDataSource
-extension ProductCategoryVC: UITableViewDataSource {
+extension ProductCategoryVC: UITableViewDataSource, UITableViewDelegate {
 
+    // TableView DataSource Methods
     func numberOfSections(in tableView: UITableView) -> Int {
         return categories.count
     }
@@ -97,26 +98,24 @@ extension ProductCategoryVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.subCategoryCell, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.subCategoryTableViewCell, for: indexPath)
         let subcategory = getChildCategoryAtIndexPath(indexPath: indexPath)
         cell.setProductSubCategoryDetails(subCategory: subcategory)
         return cell
     }
-}
-
-//Mark: - UITableViewDelegate
-extension ProductCategoryVC: UITableViewDelegate {
     
+    
+    // TableView Delegate Methods
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    
-        let categoryCell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.categoryCell)
+        
+        let categoryCell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.categoryTableViewCell)
         let category = getCategoryAtIndex(index: section)
         categoryCell?.setProductCategoryDetails(category: category)
         return categoryCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
+        
         tableView.deselectRow(at: indexPath, animated: true)
         let category = getCategoryAtIndex(index: indexPath.section)
         self.presenter.updateCurrentRootCategory(currentCategory: category)

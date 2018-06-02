@@ -8,27 +8,17 @@
 
 import Foundation
 
-
-let keyCategories           = "categories"
-let keyCategoryId           = "categoryId"
-let keyMostOrderedProducts   = "Most OrdeRed Products"
-let keyMostViewedProducts    = "Most Viewed Products"
-let keyMostSharedProducts    = "Most Shared Products"
-let keyRankingName           = "ranking"
-let keyRankings              = "rankings"
-let keyProducts              = "products"
-
-
 struct WebServiceURL {
     
-    static let serviceURL = "https://stark-spire-93433.herokuapp.com/json"
+    static let serviceURL                       = "https://stark-spire-93433.herokuapp.com/json"
 }
 
 /* Application Titles */
 struct ApplicationTitles {
     
-    static let rankingTitle                = "Ranking"
-    static let categoryTitle               = "Category"
+    static let rankingTitle                     = "Ranking"
+    static let categoryTitle                    = "Category"
+    static let productTitle                     = "Products"
 }
 
 /* Alert Messages */
@@ -43,18 +33,27 @@ struct Messages {
 /* Cell Identifiers */
 struct TableViewCellIdentifiers {
     
-    static let categoryCell         = "categoryCell"
-    static let subCategoryCell      = "subCategoryCell"
-    static let productListCell      = "productListCell"
+    static let categoryTableViewCell                     = "categoryTableViewCell"
+    static let subCategoryTableViewCell                  = "subCategoryTableViewCell"
+    static let productListTableViewCell                  = "productListTableViewCell"
 }
 
 /* Controller Identifiers */
 struct ControllerIdentifiers {
     
-    static let subCategoryVC    = "SubCategoryViewController"
+    static let subCategoryVC                    = "SubCategoryViewController"
 }
 
 /* Set Cell Size */
 struct ProductCellDetails {
     static let cellHeight   = 80.0
 }
+
+let keyCategories                               = "categories"
+let keyCategoryId                               = "categoryId"
+let keyMostOrderedProducts                      = "Most OrdeRed Products"
+let keyMostViewedProducts                       = "Most Viewed Products"
+let keyMostSharedProducts                       = "Most Shared Products"
+let keyRankingName                              = "ranking"
+let keyRankings                                 = "rankings"
+let keyProducts                                 = "products"

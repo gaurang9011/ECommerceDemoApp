@@ -19,7 +19,7 @@ class ProductManager {
     private init() {}
     
     var productCategories: [ProductCategory] = []
-    var rankingProducts = [String: [FeaturedProduct]]()
+    var rankingProducts = [String: [CategoryProduct]]()
 }
 
 // Save Products and Category

@@ -44,9 +44,9 @@ class ProductSubCategoryVC: CustomViewController  {
     }
 }
 
-//Mark: - UITableViewDataSource
-extension ProductSubCategoryVC: UITableViewDataSource {
+extension ProductSubCategoryVC: UITableViewDataSource, UITableViewDelegate {
     
+    // TableView DataSource Methods
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -60,16 +60,13 @@ extension ProductSubCategoryVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.subCategoryCell, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.subCategoryTableViewCell, for: indexPath)
         let subCategory = selectedCategory?.childCategories[indexPath.row]
         cell.setProductSubCategoryDetails(subCategory: subCategory!)
         return cell
     }
-}
-
-//Mark: - UITableViewDelegate
-extension ProductSubCategoryVC: UITableViewDelegate {
     
+    // TableView Delegate Methods
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
@@ -77,5 +74,4 @@ extension ProductSubCategoryVC: UITableViewDelegate {
         router.showProductType(category: productType!)
     }
 }
-
 

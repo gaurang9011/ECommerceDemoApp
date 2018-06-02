@@ -19,6 +19,10 @@ extension UITableViewCell {
         textLabel?.text = self.removeWhiteSpacesAndNewlines(string: subCategory.name)
     }
     
+    func setProductDetails(product: Product) {
+        textLabel?.text = self.removeWhiteSpacesAndNewlines(string: product.name)
+    }
+    
     func removeWhiteSpacesAndNewlines (string: String) -> String {
         return string.trimmingCharacters(in: .whitespacesAndNewlines)
     }
