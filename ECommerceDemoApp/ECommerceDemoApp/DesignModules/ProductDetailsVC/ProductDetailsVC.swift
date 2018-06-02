@@ -12,8 +12,9 @@ import UIKit
 class ProductDetailsVC: CustomViewController  {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    var product: CategoryProduct?
 }
-
 
 extension ProductDetailsVC: UITableViewDataSource, UITableViewDelegate {
     
