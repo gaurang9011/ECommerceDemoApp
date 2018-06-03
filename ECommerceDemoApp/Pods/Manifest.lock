@@ -10,7 +10,6 @@ PODS:
   - Realm/Headers (3.6.0)
   - RealmSwift (3.6.0):
     - Realm (= 3.6.0)
-  - RSLoadingView (1.1.2)
 
 DEPENDENCIES:
   - Alamofire
@@ -18,7 +17,6 @@ DEPENDENCIES:
   - ObjectMapper
   - "ObjectMapper+Realm"
   - RealmSwift
-  - RSLoadingView
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -28,7 +26,6 @@ SPEC REPOS:
     - "ObjectMapper+Realm"
     - Realm
     - RealmSwift
-    - RSLoadingView
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
@@ -37,8 +34,7 @@ SPEC CHECKSUMS:
   "ObjectMapper+Realm": 4cf44ed3202a73f08594e21e13eb3f8aa9b5a664
   Realm: 08b464b462d4f31bbd4ba5f5a1c8722ef0a700b7
   RealmSwift: 973e1499c44ab571f894c2c908e2db450be280c3
-  RSLoadingView: fdfeee9968b6dad2559169a97da0ad2580371f3a
 
-PODFILE CHECKSUM: 6ec4d38409874afcee7620d3a21b6a18d392d6dc
+PODFILE CHECKSUM: f0030bc1bebaf646be45eb4f7c5834528dceb67d
 
 COCOAPODS: 1.5.3
