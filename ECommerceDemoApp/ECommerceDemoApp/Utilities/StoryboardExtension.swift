@@ -10,15 +10,12 @@ import Foundation
 import UIKit
 
 extension UIStoryboard {
-    
     static func main() -> UIStoryboard {
         return UIStoryboard(name: "Main", bundle: nil)
     }
 }
 
-
 extension UIColor {
-
     convenience init(hex: String) {
         let scanner = Scanner(string: hex)
         scanner.scanLocation = 0
@@ -77,7 +74,7 @@ extension UIColor {
         }
         
         if value.lowercased() == "silver" {
-            return UIColor(hex: "FFD700")
+            return UIColor(hex: "C0C0C0")
         }
         
         if value.lowercased() == "golden" {

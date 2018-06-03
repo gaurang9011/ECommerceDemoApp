@@ -11,10 +11,7 @@ import UIKit
 
 class CustomViewController: UIViewController {
 
-    // MARK:
     // MARK: View LifeCycle
-    // MARK:
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,28 +40,7 @@ class CustomViewController: UIViewController {
         super.viewDidDisappear(animated)
     }
     
-    
-    // MARK: - Hide-Show NativationBar
-    func hideNavigationBar(_ hidden: Bool) {
-        
-        navigationController?.navigationBar.isHidden = hidden
-    }
-    
-    // Add Back button to Nativation Bar
-    func addBackButtonNavBar() {
-        
-        let backButton = UIBarButtonItem(image: #imageLiteral(resourceName: "back"), style: .plain, target: self, action: #selector(backButtonClicked))
-        navigationItem.leftBarButtonItem = backButton
-    }
-    
-    @objc func backButtonClicked() {
-        
-        // pop controller
-        _ = navigationController?.popViewController(animated: true)
-    }
-    
-    
-    // MARK: - Navigation Bar Methods
+    // MARK: Navigation Bar Methods
     func setNavigationBar () {
         
         navigationController?.navigationBar.barStyle = .black
@@ -72,5 +48,21 @@ class CustomViewController: UIViewController {
         navigationController?.navigationBar.barTintColor = NavigationTheme.NavigationBarColor
         navigationController?.navigationBar.tintColor = NavigationTheme.NavigationBarTintColor
         navigationController?.navigationBar.isTranslucent = false
+    }
+    
+    // MARK: Hide-Show NativationBar
+    func hideNavigationBar(_ hidden: Bool) {
+        navigationController?.navigationBar.isHidden = hidden
+    }
+    
+    // Add back button to Nativationbar
+    func addBackButtonNavBar() {
+        let backButton = UIBarButtonItem(image: #imageLiteral(resourceName: "back"), style: .plain, target: self, action: #selector(backButtonClicked))
+        navigationItem.leftBarButtonItem = backButton
+    }
+    
+    @objc func backButtonClicked() {
+        // pop controller
+        _ = navigationController?.popViewController(animated: true)
     }
 }

@@ -47,9 +47,8 @@ class NetworkManager {
         do {
             let data = try JSONSerialization.data(withJSONObject: parameters ?? [:], options:.prettyPrinted)
             let paramString = String(data: data,encoding: String.Encoding.utf8)!
-            print("URL: \(url)")
-            print("HEADERS: \(headers ?? [:])")
-            print("PARAMETERS: \(paramString)")
+            print("url: \(url)")
+            print("parameteres: \(paramString)")
         }
         catch {
             print(error.localizedDescription)
@@ -60,9 +59,6 @@ class NetworkManager {
             
             // hide indicator
             self.hideIndicator()
-            
-            // print response
-            print(response.result.value ?? "")
             
             // check result is success
             guard response.result.isSuccess else {
@@ -84,6 +80,7 @@ class NetworkManager {
     }
 }
 
+// MARK: Loading Activity
 extension NetworkManager {
     
     // Hide indicator
@@ -93,9 +90,8 @@ extension NetworkManager {
         }
     }
     
-    //SHow Indiactor
+    //Show Indiactor
     func showIndicator() {
-        
         DispatchQueue.main.async {
             EZLoadingActivity.show("Please wait...", disableUI: true)
         }

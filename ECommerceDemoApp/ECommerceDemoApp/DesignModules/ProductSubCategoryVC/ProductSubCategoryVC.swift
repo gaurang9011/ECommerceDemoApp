@@ -40,6 +40,8 @@ class ProductSubCategoryVC: CustomViewController  {
         tableView.estimatedRowHeight = 70
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.tableFooterView = UIView()
+        
+        addBackButtonNavBar()
     }
     
     // MARK: Initialize Controller

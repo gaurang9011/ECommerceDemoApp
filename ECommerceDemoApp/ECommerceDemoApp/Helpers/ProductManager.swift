@@ -11,14 +11,23 @@ import RealmSwift
 import ObjectMapper
 import ObjectMapper_Realm
 
+/*
+ ProductManager:
+ This class is used to manage all network calls and parsing the data.
+ */
 class ProductManager {
     
-    // Mark: Singelton object
+    // MARK: Singelton object
     static let shared = ProductManager()
     
     private init() {}
     
+    // MARK: Properties
+    
+    // Used to store all product categories
     var productCategories: [ProductCategory] = []
+    
+    // User to store all ranking products
     var rankingProducts = [String: [CategoryProduct]]()
 }
 
@@ -56,10 +65,12 @@ extension ProductManager {
         
         let objRealm = try! Realm()
         
+        // User to find Most viewed, ordered and shared data
         let orderedIds = Array(objRealm.objects(RankingProducts.self).filter("order > 0").sorted(byKeyPath: "order", ascending: false)).flatMap({ $0.productId })
         let viewedIds = Array(objRealm.objects(RankingProducts.self).filter("view > 0").sorted(byKeyPath: "view", ascending: false)).flatMap({ $0.productId })
         let sharedIds = Array(objRealm.objects(RankingProducts.self).filter("share > 0").sorted(byKeyPath: "share", ascending: false)).flatMap({ $0.productId })
         
+        // Used to store Most viewed, ordered and shared products
         var orderedProducts:[CategoryProduct] = [CategoryProduct]()
         var viewedProducts:[CategoryProduct] = [CategoryProduct]()
         var sharedProducts:[CategoryProduct] = [CategoryProduct]()
@@ -117,6 +128,7 @@ extension ProductManager {
 // Parse Category and Product Details
 extension ProductManager {
     
+    // User to create tree structure of all products category wise
     private func prepareCategoryWiseProducts(list: [ProductCategory]) -> [ProductCategory] {
         
         for category in list {
@@ -132,6 +144,7 @@ extension ProductManager {
         return rootNodes
     }
     
+    // Used to create list of ranking products
     func preprareRankingProductList(list: [Any]) -> [RankingProducts] {
         
         var rankingProductList = [RankingProducts]()

@@ -76,12 +76,14 @@ class ProductDetailsVC: CustomViewController  {
         tableView.estimatedRowHeight = 140
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.tableFooterView = UIView()
+        
+        addBackButtonNavBar()
     }
     
     // MARK: Initialize Controller
     func initializeController() {
         
-        self.title = product?.categoryName
+        self.title = product?.product.name
         self.tableView.reloadData()
     }
 }

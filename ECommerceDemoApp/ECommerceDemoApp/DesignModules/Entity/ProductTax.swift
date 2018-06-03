@@ -13,11 +13,11 @@ import ObjectMapper_Realm
 
 class ProductTax: Object, Mappable {
 
-    // Mark: Properties
+    // MARK: Properties
     @objc dynamic var name: String = ""
     @objc dynamic var value: Double = 0
     
-    // Mark: Mappable
+    // MARK: Mappable
     required convenience init?(map: Map) {
         self.init()
     }

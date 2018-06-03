@@ -48,7 +48,6 @@
 		ECEAD63E20C0166F00DCC8B7 /* ProductCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAD63D20C0166F00DCC8B7 /* ProductCategoryVC.swift */; };
 		ECEAD64020C0168500DCC8B7 /* ProductRankingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAD63F20C0168500DCC8B7 /* ProductRankingVC.swift */; };
 		ECEAD64520C018DA00DCC8B7 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAD64420C018DA00DCC8B7 /* CustomViewController.swift */; };
-		ECEAD64720C019AB00DCC8B7 /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEAD64620C019AB00DCC8B7 /* NavigationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,7 +120,6 @@
 		ECEAD63F20C0168500DCC8B7 /* ProductRankingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRankingVC.swift; sourceTree = "<group>"; };
 		ECEAD64220C018B200DCC8B7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		ECEAD64420C018DA00DCC8B7 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
-		ECEAD64620C019AB00DCC8B7 /* NavigationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
 		FEC63CC78C0DCFEFF6E5AF0E /* Pods-ECommerceDemoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECommerceDemoAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ECommerceDemoAppTests/Pods-ECommerceDemoAppTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -276,7 +274,6 @@
 			isa = PBXGroup;
 			children = (
 				ECEAD61C20C008B700DCC8B7 /* ApplicationConstants.swift */,
-				ECEAD64620C019AB00DCC8B7 /* NavigationHelper.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -620,7 +617,6 @@
 				EC5A1A3020C2D7EB00DC56AF /* ProductDetailsRouter.swift in Sources */,
 				ECB5843A20C151B3005F1AD8 /* ProductListVC.swift in Sources */,
 				EC3704D420C3E46D00FC0768 /* ProductRankingPresenter.swift in Sources */,
-				ECEAD64720C019AB00DCC8B7 /* NavigationHelper.swift in Sources */,
 				EC5A1A3920C2FDD000DC56AF /* ProductDetailColorCell.swift in Sources */,
 				EC03C57820C0609E00E335D0 /* RankingProducts.swift in Sources */,
 				ECB5843E20C151D6005F1AD8 /* ProductSubCategoryVC.swift in Sources */,

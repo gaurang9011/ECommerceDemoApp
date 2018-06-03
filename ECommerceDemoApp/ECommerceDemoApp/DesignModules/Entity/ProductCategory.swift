@@ -13,13 +13,13 @@ import ObjectMapper_Realm
 
 class ProductCategory: Object, Mappable  {
 
-    //Mark: Properties
+    //MARK: Properties
     @objc dynamic var categoryId: Int   = 0
     @objc dynamic var name: String      = ""
     var products = List<Product>()
     var childCategoryIds = List<Int>()
     
-    //Mark: Mappable
+    //MARK: Mappable
     required convenience init?(map: Map) {
         self.init()
     }
@@ -39,9 +39,12 @@ class ProductCategory: Object, Mappable  {
     override static func primaryKey() -> String? {
         return "categoryId"
     }
+    // MARK: Custom Properties
     
+    // Used to store child categories
     var childCategories = List<ProductCategory>()
     
+    // User to check if model has child categories
     var hasChildCategories: Bool {
         return childCategoryIds.count>0
     }

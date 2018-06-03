@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
+// Webservice URL
 struct WebServiceURL {
-    
     static let serviceURL                       = "https://stark-spire-93433.herokuapp.com/json"
 }
 
-/* Application Titles */
+// Application Titles
 struct ApplicationTitles {
     
     static let rankingTitle                     = "Ranking"
@@ -22,7 +22,7 @@ struct ApplicationTitles {
     static let productTitle                     = "Products"
 }
 
-/* Alert Messages */
+// Messages used to display alert
 struct Messages {
     
     static let internetConnection               = "No internet connection available."
@@ -31,7 +31,7 @@ struct Messages {
     static let noDataAvailable                  = "No data available. Please try again."
 }
 
-/* Cell Identifiers */
+// TableView/CollectionView Cell Identifiers
 struct TableViewCellIdentifiers {
     
     static let categoryTableViewCell             = "categoryTableViewCell"
@@ -45,7 +45,7 @@ struct TableViewCellIdentifiers {
     static let productSizeCollectionCell         = "productSizeCollectionCell"
 }
 
-/* Set Cell Size */
+// Set Custom Cell Sizes
 struct CellHeightDetails {
     static let cellHeight                       = 80.0
     static let productImageCelllHeight          = 180.0
@@ -55,13 +55,21 @@ struct CellHeightDetails {
     static let productSizeCelllHeight           = 80.0
 }
 
-
+//Set Category Images for Product
 struct CategoryImages {
     static let electronics: UIImage             = #imageLiteral(resourceName: "electronics")
     static let menswear: UIImage                =  #imageLiteral(resourceName: "menswear")
 }
 
+// Set NavigationBar UI
+struct NavigationTheme {
+    
+    static let NavigationBarColor: UIColor = .blue
+    static let NavigationBarTintColor: UIColor = .white
+    static let NavigationTitleColor: UIColor = .white
+}
 
+// Response keys used to parse the repsonse
 let keyCategories                               = "categories"
 let keyRankingName                              = "ranking"
 let keyRankings                                 = "rankings"

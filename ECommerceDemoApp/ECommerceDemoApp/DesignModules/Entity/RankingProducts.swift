@@ -13,14 +13,14 @@ import ObjectMapper_Realm
 
 class RankingProducts: Object, Mappable {
     
-    //Mark: Properties
+    //MARK: Properties
     
     @objc dynamic var productId: Int  = 0
     @objc dynamic var order: Double = 0
     @objc dynamic var view: Double  = 0
     @objc dynamic var share: Double = 0
     
-    //Mark: Mappable
+    //MARK: Mappable
     required convenience init?(map: Map) {
         self.init()
     }

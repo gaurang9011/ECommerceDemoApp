@@ -13,13 +13,13 @@ import ObjectMapper_Realm
 
 class ProductVariant: Object, Mappable  {
     
-    // Mark: Properties
+    // MARK: Properties
     @objc dynamic var variantId: Int  = 0
     @objc dynamic var color: String   = ""
     @objc dynamic var size: Int       = 0
     @objc dynamic var price: Double   = 0
     
-    // Mark: Mappable
+    // MARK: Mappable
     required convenience init?(map: Map) {
         self.init()
     }

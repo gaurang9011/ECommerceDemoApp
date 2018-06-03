@@ -13,14 +13,14 @@ import ObjectMapper_Realm
 
 class Product: Object, Mappable {
 
-    //Mark: Properties
+    //MARK: Properties
     @objc dynamic var productId: Int        = 0
     @objc dynamic var name: String          = ""
     @objc dynamic var dateAdded: Date       = Date()
     @objc dynamic var tax: ProductTax?
     var variants = List<ProductVariant>()
     
-    // Mark: Mappable
+    // MARK: Mappable
     required convenience init?(map: Map) {
         self.init()
     }
@@ -60,7 +60,7 @@ extension Product {
         return Array(variants).filter( {$0.color == color} )
     }
     
-    
+    // Get Price for Product
     func getPriceForVariant(selectedVariant: (color: String, size: Int?)) -> ((value: Double, string: String), (value: Double, string: String))? {
         
         guard Array(variants).count > 0 else {
@@ -72,6 +72,7 @@ extension Product {
         let color = selectedVariant.color
         let size = selectedVariant.size
         
+        // Find Match
         let varFound = productVariants.first { (variant) -> Bool in
         
             if let sizeValue = size {
