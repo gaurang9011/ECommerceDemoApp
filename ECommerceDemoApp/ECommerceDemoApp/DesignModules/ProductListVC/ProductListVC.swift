@@ -9,15 +9,24 @@
 import Foundation
 import UIKit
 
+/**
+ ProductListVC:
+ This class is used to send the user actions to the presenter and shows whatever the presenter tells it.
+ */
 class ProductListVC: CustomViewController {
  
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: Properties Declaration
+    
+    // A router object
     var router: ProductListRouter!
+    
+    // variable used to store selected product category
     var selectedCategory: ProductCategory?
     
+    // MARK: View LifeCycle
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         self.setupUI()
         self.initializeController()
@@ -25,14 +34,14 @@ class ProductListVC: CustomViewController {
     
     //Mark: Custom methods
     
-    // This method is used to setup views and subviews.
+    // This method is used to setup UI when view loads
     func setupUI() {
         tableView.estimatedRowHeight = 70
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.tableFooterView = UIView()
     }
     
-    //initializeController
+    // MARK: Initialize Controller
     func initializeController() {
         
         let router = ProductListRouter()
@@ -44,6 +53,7 @@ class ProductListVC: CustomViewController {
     }
 }
 
+// MARK: UITableView Methods
 extension ProductListVC: UITableViewDataSource, UITableViewDelegate {
     
     // TableView DataSource Methods

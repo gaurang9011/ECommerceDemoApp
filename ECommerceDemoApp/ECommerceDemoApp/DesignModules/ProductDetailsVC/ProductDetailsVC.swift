@@ -9,24 +9,47 @@
 import Foundation
 import UIKit
 
+// Identiry selected variant
 typealias SelectedVariant = (color: String, size: Int?)
 
+// Product Details Options
+enum ProductDetailOption: Int {
+    
+    case image = 0,
+    color,
+    size,
+    info
+}
+
+
+/**
+ ProductCategoryRouter:
+ This class is used to send the user actions to the presenter and shows whatever the presenter tells it.
+ */
 class ProductDetailsVC: CustomViewController  {
 
+    // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: Properties Declaration
+    
+    // Used to hold currents product info
     var product: CategoryProduct?
+    
+    // Used to store creent variant's information
     var currentVariant = SelectedVariant("", nil)
     
-    
+    // Used to store colors available for product
     var colors: [String] {
         return product?.product.colors() ?? []
     }
     
+    // Used to store sizes available for the seletced variant
     var sizes: [ProductVariant] {
         return product?.product.getAvailableSizeForColor(currentVariant.color) ?? []
     }
     
+    // MARK: View LifeCycle
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -46,16 +69,16 @@ class ProductDetailsVC: CustomViewController  {
         }
     }
         
-    //Mark: Custom methods
+    // MARK: Custom functions
     
-    // This method is used to setup views and subviews.
+    // This method is used to setup UI when view loads
     func setupUI() {
         tableView.estimatedRowHeight = 140
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.tableFooterView = UIView()
     }
     
-    //initializeController
+    // MARK: Initialize Controller
     func initializeController() {
         
         self.title = product?.categoryName
@@ -63,46 +86,55 @@ class ProductDetailsVC: CustomViewController  {
     }
 }
 
+// MARK: UITableView Methods
 extension ProductDetailsVC: UITableViewDataSource, UITableViewDelegate {
     
     // TableView DataSource Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row == 0 {
+        switch indexPath.row {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.productDetailImageCell, for: indexPath) as! ProductDetailImageCell
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            cell.setProductImage(category: appDelegate.currentRootCategory?.name ?? (product?.categoryName)!)
-            return cell
+            // Product Image Cell
+            case ProductDetailOption.image.rawValue:
+                
+                let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.productDetailImageCell, for: indexPath) as! ProductDetailImageCell
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                cell.setProductImage(category: appDelegate.currentRootCategory?.name ?? (product?.categoryName)!)
+                return cell
             
-        } else if indexPath.row == 1 {
+            // Product Color Cell
+            case ProductDetailOption.color.rawValue:
+                
+                let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.productDetailColorCell, for: indexPath) as! ProductDetailColorCell
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.productDetailColorCell, for: indexPath) as! ProductDetailColorCell
+                cell.setProductColors(colors: colors, selected: self.currentVariant.color)
+                cell.colorCellDelegate = self
+                return cell
             
-            cell.setProductColors(colors: colors, selected: self.currentVariant.color)
-            cell.colorCellDelegate = self
-            return cell
+            // Product Size Cell
+            case ProductDetailOption.size.rawValue:
+                
+                let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.productDetailSizeCell, for: indexPath) as! ProductDetailSizeCell
             
-        } else if indexPath.row == 2 {
+                cell.setProducSizes(sizes: sizes, selected: currentVariant.size)
+                cell.sizeCellDelegate = self
+                return cell
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.productDetailSizeCell, for: indexPath) as! ProductDetailSizeCell
+            // Product Info Cell
+            case ProductDetailOption.info.rawValue:
+                
+                let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.productDetailInfoCell, for: indexPath) as! ProductDetailInfoCell
+                cell.setProductDetails(details: (product?.product)!, variant: currentVariant)
+                return cell
         
-            cell.setProducSizes(sizes: sizes, selected: currentVariant.size)
-            cell.sizeCellDelegate = self
-            return cell
-            
-        } else {
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.productDetailInfoCell, for: indexPath) as! ProductDetailInfoCell
-            cell.setProductDetails(details: (product?.product)!, variant: currentVariant)
-            return cell
-            
+            default:
+                return UITableViewCell()
         }
+        
     }
     
     // TableView Delegate Methods
@@ -110,29 +142,25 @@ extension ProductDetailsVC: UITableViewDataSource, UITableViewDelegate {
         
         switch indexPath.row {
             
-        case 0:
+        case ProductDetailOption.image.rawValue:
             return CGFloat(CellHeightDetails.productImageCelllHeight)
             
-        case 1:
+        case ProductDetailOption.color.rawValue:
             return CGFloat(CellHeightDetails.productColorCelllHeight)
             
-        case 2:
+        case ProductDetailOption.size.rawValue:
             return CGFloat(CellHeightDetails.productSizeCelllHeight)
             
-        case 3:
+        case ProductDetailOption.info.rawValue:
             return UITableViewAutomaticDimension
             
         default:
             return 0
         }
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
 }
 
-
+// MARK: ProductDetailColorCellDelegate
 extension ProductDetailsVC: ProductDetailColorCellDelegate {
     
     func selectedColor(color: String) {
@@ -147,6 +175,7 @@ extension ProductDetailsVC: ProductDetailColorCellDelegate {
     }
 }
 
+// MARK: ProductDetailSizeCellDelegate
 extension ProductDetailsVC: ProductDetailSizeCellDelegate {
     
     func selectedSize(size: Int) {

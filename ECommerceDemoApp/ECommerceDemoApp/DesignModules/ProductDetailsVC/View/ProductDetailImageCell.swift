@@ -11,6 +11,7 @@ import UIKit
 
 class ProductDetailImageCell: UITableViewCell {
     
+    // MARK: Outlets
     @IBOutlet weak var imgProduct: UIImageView!
     
     override func awakeFromNib() {
@@ -21,6 +22,7 @@ class ProductDetailImageCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    // This func is used to set the product images based on the category
     func setProductImage(category: String) {
         imgProduct.image = (category.lowercased() == "") ? CategoryImages.electronics : CategoryImages.menswear
     }

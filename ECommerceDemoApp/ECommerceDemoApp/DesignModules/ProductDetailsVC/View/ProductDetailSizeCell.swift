@@ -9,14 +9,17 @@
 import Foundation
 import UIKit
 
+// MARK: Protocols
 protocol ProductDetailSizeCellDelegate {
     func selectedSize(size: Int)
 }
 
 class ProductDetailSizeCell: UITableViewCell {
     
+    // MARK: Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // MARK: Properties Declaration
     var productSizes = [ProductVariant]()
     var sizeCellDelegate: ProductDetailSizeCellDelegate!
     var selectedSize: Int?
@@ -31,6 +34,9 @@ class ProductDetailSizeCell: UITableViewCell {
         collectionView.delegate = self
     }
     
+    // MARK: Custom functions
+    
+    // This function is used to set product sizes
     func setProducSizes(sizes: [ProductVariant], selected: Int?) {
         self.productSizes = sizes
         self.selectedSize = selected
@@ -38,6 +44,7 @@ class ProductDetailSizeCell: UITableViewCell {
     }
 }
 
+// MARK: UICollectionView
 extension ProductDetailSizeCell : UICollectionViewDataSource, UICollectionViewDelegate {
 
     //UICollectionViewDataSource

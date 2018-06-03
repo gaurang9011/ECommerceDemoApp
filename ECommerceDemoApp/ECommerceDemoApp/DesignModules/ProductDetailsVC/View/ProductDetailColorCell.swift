@@ -9,16 +9,24 @@
 import Foundation
 import UIKit
 
+// MARK: Protocols
 protocol ProductDetailColorCellDelegate {
     func selectedColor(color: String)
 }
 
 class ProductDetailColorCell: UITableViewCell {
     
+    // MARK: Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // MARK: Properties Declaration
+    
     var productColors = [String]()
+    
+    //stores selected color
     var selectedColor: String = ""
+    
+    // delegate
     var colorCellDelegate: ProductDetailColorCellDelegate!
     
     override func awakeFromNib() {
@@ -32,6 +40,8 @@ class ProductDetailColorCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    // MARK: Custom functions
+    // This function is used to set the product colors
     func setProductColors(colors: [String], selected: String) {
         self.productColors = colors
         self.selectedColor = selected
@@ -39,6 +49,7 @@ class ProductDetailColorCell: UITableViewCell {
     }
 }
 
+// MARK: UICollectionView Methods
 extension ProductDetailColorCell : UICollectionViewDataSource, UICollectionViewDelegate {
 
     // UICollectionViewDataSource

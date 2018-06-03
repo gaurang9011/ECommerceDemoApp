@@ -9,11 +9,19 @@
 import Foundation
 import UIKit
 
+/**
+ ProductRankingRouter:
+ This class has all navigation logic for describing which screens are to be shown when.
+ */
 class ProductRankingRouter {
 
+    // MARK: Properties Declaration
     weak var viewControllerObject: ProductRankingVC!
+   
+    // MARK: Custom functions
     
-    func showProductDetails(product: CategoryProduct) {
+    // This function is used to show products details for the selected product.
+    func loadProductDetails(product: CategoryProduct) {
         
         let productDetailViewController = UIViewController.productDetailViewController()
         productDetailViewController.product = product

@@ -9,13 +9,23 @@
 import Foundation
 import UIKit
 
+/**
+ ProductSubCategoryVC:
+ This class is used to send the user actions to the presenter and shows whatever the presenter tells it.
+ */
 class ProductSubCategoryVC: CustomViewController  {
 
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: Properties Declaration
+
+    // A router object
     var router: ProductSubCategoryRouter!
+    
+    // varible which used to store selected product category
     var selectedCategory: ProductCategory?
     
+    // MARK: View LifeCycle
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -23,16 +33,16 @@ class ProductSubCategoryVC: CustomViewController  {
         self.initializeController()
     }
     
-    //Mark: Custom methods
+    //MARK: Custom methods
     
-    // This method is used to setup views and subviews.
+    // This method is used to setup UI when view loads
     func setupUI() {
         tableView.estimatedRowHeight = 70
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.tableFooterView = UIView()
     }
     
-    //initializeController
+    // MARK: Initialize Controller
     func initializeController() {
         
         let router = ProductSubCategoryRouter()
@@ -44,6 +54,7 @@ class ProductSubCategoryVC: CustomViewController  {
     }
 }
 
+// MARK: UITableView Methods
 extension ProductSubCategoryVC: UITableViewDataSource, UITableViewDelegate {
     
     // TableView DataSource Methods

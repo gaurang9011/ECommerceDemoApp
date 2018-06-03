@@ -9,17 +9,27 @@
 import Foundation
 import UIKit
 
+// MARK: Protocols
 protocol ProductRankingInteractorDelegate {
     
+    // This function is used to gets all the ranking products
     func fetchRankingProdcuts()
+    
+    // This function is used to update the category after selection
     func updateCurrentRootCategory(currentCategory: ProductCategory)
 }
 
+/**
+ ProductRankingPresenter:
+This class has business logic of an app. It is used to make API calls to fetch the data from the source.
+ */
 class ProductRankingInteractor {
     
+    // MARK: Properties Declaration
     weak var presenter: ProductRankingPresenterDelegate!
 }
 
+// MARK: ProductRankingInteractorDelegate
 extension ProductRankingInteractor: ProductRankingInteractorDelegate {
  
     func fetchRankingProdcuts() {
@@ -34,7 +44,10 @@ extension ProductRankingInteractor: ProductRankingInteractorDelegate {
             
             guard let result = data as? ResponseData else { return }
             
+            // get rankings products
             if let rankingsArray = result[keyRankings] as? ResponseArray {
+                
+                // Save ranking products to database
                 ProductManager.shared.saveRankingProducts(list: rankingsArray)
                 self.readDataFromDatabase()
             }
@@ -52,6 +65,7 @@ extension ProductRankingInteractor: ProductRankingInteractorDelegate {
 
 extension ProductRankingInteractor {
     
+    // This method is used to gets data from database
     func readDataFromDatabase() {
         
         let rankingProducts = ProductManager.shared.getRankingProductList()

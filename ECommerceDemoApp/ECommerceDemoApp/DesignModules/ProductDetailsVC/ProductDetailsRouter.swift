@@ -9,6 +9,10 @@
 import Foundation
 import UIKit 
 
+/**
+ ProductDetailsRouter:
+ This class has all navigation logic for describing which screens are to be shown when.
+ */
 class ProductDetailsRouter {
     
 }

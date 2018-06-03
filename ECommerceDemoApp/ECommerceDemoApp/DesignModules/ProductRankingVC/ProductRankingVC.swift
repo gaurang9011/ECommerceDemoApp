@@ -9,18 +9,30 @@
 import Foundation
 import UIKit
 
+// MARK: Protocols
 protocol ProductRankingDelegate: class {
     
+    // This function is used to display the ranking products.
     func displayRankingProducts(list: [String: [CategoryProduct]])
 }
 
+/**
+ ProductRankingVC:
+ This class is used to send the user actions to the presenter and shows whatever the presenter tells it.
+ */
 class ProductRankingVC: CustomViewController  {
     
+    // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: Properties Declaration
     
     var products = [String: [CategoryProduct]]()
     
+    // A presenter object
     var presenter: ProductRankingPresenterDelegate!
+    
+    // A router object
     var router: ProductRankingRouter!
     
     // MARK: - Life Cycle
@@ -32,15 +44,16 @@ class ProductRankingVC: CustomViewController  {
         setupUI()
     }
     
-    // MARK: - Custom methods
+    // MARK: Custom functions
+    // This method is used to setup UI when view loads
     func setupUI() {
         
-        tableView.estimatedRowHeight = 55
+        tableView.estimatedRowHeight = 70
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.tableFooterView = UIView()
     }
     
-    // MARK: - initializeController
+    // MARK: Initialize Controller
     func initializeController() {
         
         self.title = ApplicationTitles.rankingTitle
@@ -51,24 +64,31 @@ class ProductRankingVC: CustomViewController  {
         let interactor = ProductRankingInteractor()
         interactor.presenter = presenter
         
-        let router = ProductRankingRouter()
+        self.router = ProductRankingRouter()
+        
         presenter.interactor = interactor
         presenter.viewControllerDelegate = self
         router.viewControllerObject = self
         
         self.presenter.fetchRankingProdcuts()
     }
+}
+
+extension ProductRankingVC {
     
+    // Used to category name at given index
     func getCategoryName(index: Int) -> String {
         return Array(products.keys)[index]
     }
     
+    // User to get ranking product details at given indexPath
     func getProductDetails(at indexPath: IndexPath) -> CategoryProduct {
         let name = getCategoryName(index: indexPath.section)
         return products[name]![indexPath.row]
     }
 }
 
+// MARK: ProductRankingDelegate
 extension ProductRankingVC: ProductRankingDelegate {
     
     func displayRankingProducts(list: [String: [CategoryProduct]]) {
@@ -112,10 +132,7 @@ extension ProductRankingVC: UITableViewDataSource, UITableViewDelegate {
         
         tableView.deselectRow(at: indexPath, animated: true)
         let productDetails = getProductDetails(at: indexPath)
-        
-        let productDetailViewController = UIViewController.productDetailViewController()
-        productDetailViewController.product = productDetails
-        self.navigationController?.pushViewController(productDetailViewController, animated: true)
+        self.router.loadProductDetails(product: productDetails)
     }
 }
 

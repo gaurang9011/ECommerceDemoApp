@@ -9,21 +9,33 @@
 import Foundation
 import UIKit
 
+// MARK: Protocols
 protocol ProductCategoryDelegate: class {
 
+    // This function is used to display the product categories.
     func displayProductCategories(list: [ProductCategory])
 }
 
+/**
+ ProductCategoryVC:
+ This class is used to send the user actions to the presenter and shows whatever the presenter tells it.
+ */
 class ProductCategoryVC: CustomViewController  {
 
     @IBOutlet weak var tableView: UITableView!
     
-    //categories
+    // MARK: Properties Declaration
+    
+    // Array that holds category values
     var categories : [ProductCategory] = []
+    
+    // A router object
     var router: ProductCategoryRouter!
+    
+    // A presenter object
     var presenter: ProductCategoryPresenterDelegate!
     
-    // MARK: - Life Cycle
+    // MARK: View LifeCycle
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -31,9 +43,8 @@ class ProductCategoryVC: CustomViewController  {
         setupUI()
     }
     
-    //Mark: Custom methods
-    
-    // This method is used to setup views and subviews.
+    // MARK: Custom methods
+    // This method is used to setup UI when view loads
     func setupUI() {
         
         tableView.estimatedRowHeight = 70
@@ -41,7 +52,7 @@ class ProductCategoryVC: CustomViewController  {
         tableView.tableFooterView = UIView()
     }
     
-    //initializeController
+    // MARK: Initialize Controller
     func initializeController() {
         self.title = ApplicationTitles.categoryTitle
         
@@ -60,18 +71,19 @@ class ProductCategoryVC: CustomViewController  {
         self.presenter.fetchProductCategories()
     }
     
-    //get categories at Index
+    //This method used to get categories at given index
     func getCategoryAtIndex(index: Int) -> ProductCategory {
         return self.categories[index]
     }
     
-    //get child categories at given index
+    //This method used to get categories at given index
     func getChildCategoryAtIndexPath(indexPath: IndexPath ) -> ProductCategory {
         let category = getCategoryAtIndex(index: indexPath.section)
         return category.childCategories[indexPath.row]
     }
 }
 
+// MARK: ProductCategoryDelegate
 extension ProductCategoryVC: ProductCategoryDelegate {
     
     func displayProductCategories(list: [ProductCategory]) {
@@ -82,7 +94,7 @@ extension ProductCategoryVC: ProductCategoryDelegate {
     }
 }
 
-//Mark: - UITableViewDataSource
+// MARK: UITableView Methods
 extension ProductCategoryVC: UITableViewDataSource, UITableViewDelegate {
 
     // TableView DataSource Methods
@@ -91,23 +103,19 @@ extension ProductCategoryVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         let category = getCategoryAtIndex(index: section)
         return category.childCategories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.subCategoryTableViewCell, for: indexPath)
         let subcategory = getChildCategoryAtIndexPath(indexPath: indexPath)
         cell.setProductSubCategoryDetails(subCategory: subcategory)
         return cell
     }
     
-    
     // TableView Delegate Methods
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
         let categoryCell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.categoryTableViewCell)
         let category = getCategoryAtIndex(index: section)
         categoryCell?.setProductCategoryDetails(category: category)
@@ -115,7 +123,6 @@ extension ProductCategoryVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         tableView.deselectRow(at: indexPath, animated: true)
         let category = getCategoryAtIndex(index: indexPath.section)
         self.presenter.updateCurrentRootCategory(currentCategory: category)

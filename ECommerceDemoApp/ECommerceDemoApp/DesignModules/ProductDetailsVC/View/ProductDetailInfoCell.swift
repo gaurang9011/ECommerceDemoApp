@@ -11,6 +11,7 @@ import UIKit
 
 class ProductDetailInfoCell: UITableViewCell {
     
+    // MARK: Outlets
     @IBOutlet weak var lblProductName: UILabel!
     @IBOutlet weak var lblProductPrice: UILabel!
     @IBOutlet weak var lblProductTax: UILabel!
@@ -24,6 +25,8 @@ class ProductDetailInfoCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    // MARK: Custom functions
+    /// This function sets product details
     func setProductDetails(details: Product, variant:SelectedVariant) {
         
         self.lblProductName.text = details.name.trimmingCharacters(in: .whitespacesAndNewlines)

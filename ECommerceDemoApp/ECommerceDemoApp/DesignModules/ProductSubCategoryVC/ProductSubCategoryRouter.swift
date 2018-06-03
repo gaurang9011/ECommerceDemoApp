@@ -9,10 +9,18 @@
 import Foundation
 import UIKit
 
+/**
+ ProductSubCategoryRouter:
+ This class has all navigation logic for describing which screens are to be shown when.
+ */
 class ProductSubCategoryRouter {
 
+    // MARK: Properties Declaration
     weak var viewControllerObject: ProductSubCategoryVC!
     
+    // MARK: Custom methods
+    
+    // This function is used to show products for the selected sub category
     func showProductType(category:ProductCategory) {
         
         let productListViewController = UIViewController.productListViewController()
