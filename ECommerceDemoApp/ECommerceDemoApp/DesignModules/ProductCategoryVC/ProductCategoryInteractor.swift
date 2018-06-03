@@ -21,19 +21,13 @@ protocol ProductCategoryInteractorDelegate {
 class ProductCategoryInteractor {
     
     weak var presenter: ProductCategoryPresenterDelegate!
-    
-    func retrieveDataFromDatabase () {
-        
-        let productCategories = ProductManager.shared.getCategoryWiseProducts()
-        self.presenter.receivedProductCategories(list: productCategories)
-    }
 }
 
 extension ProductCategoryInteractor: ProductCategoryInteractorDelegate {
     
     func fetchProductCategories() {
         
-         fetchAndDisplayDataFromDatabase()
+         readDataFromDatabase()
         
         if ProductManager.shared.productCategories.count == 0 {
             NetworkManager.shared.showIndicator()
@@ -50,9 +44,12 @@ extension ProductCategoryInteractor: ProductCategoryInteractorDelegate {
                 let categories = Mapper<ProductCategory>().mapArray(JSONObject: dataArray) ?? []
                 
                 ProductManager.shared.saveCategoryWiseProducts(products: categories)
-                self.fetchAndDisplayDataFromDatabase()
+                self.readDataFromDatabase()
             }
             
+            if let rankingsArray = result[keyRankings] as? ResponseArray {
+                ProductManager.shared.saveRankingProducts(list: rankingsArray)
+            }
         }, failure: { (errorMessage) in
             print(errorMessage)
         })
@@ -69,12 +66,9 @@ extension ProductCategoryInteractor: ProductCategoryInteractorDelegate {
 extension ProductCategoryInteractor {
     
     /// This method gets data from database and show them in UI
-    func fetchAndDisplayDataFromDatabase() {
+    func readDataFromDatabase() {
         
-        // get category wise products
         let productCategories = ProductManager.shared.getCategoryWiseProducts()
-        
-        // show data from database
         self.presenter.receivedProductCategories(list: productCategories)
     }
 }

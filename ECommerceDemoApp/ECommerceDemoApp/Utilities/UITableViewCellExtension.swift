@@ -23,6 +23,16 @@ extension UITableViewCell {
         textLabel?.text = self.removeWhiteSpacesAndNewlines(string: product.name)
     }
     
+    func setRankingProductCategoryName(name: String) {
+        textLabel?.text = self.removeWhiteSpacesAndNewlines(string: name)
+    }
+    
+    func setRankingProductDetails(ranking: CategoryProduct) {
+        
+        textLabel?.text = self.removeWhiteSpacesAndNewlines(string: ranking.product.name)
+        detailTextLabel?.text = self.removeWhiteSpacesAndNewlines(string: ranking.categoryName)
+    }
+    
     func removeWhiteSpacesAndNewlines (string: String) -> String {
         return string.trimmingCharacters(in: .whitespacesAndNewlines)
     }

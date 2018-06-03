@@ -45,11 +45,6 @@ struct TableViewCellIdentifiers {
     static let productSizeCollectionCell         = "productSizeCollectionCell"
 }
 
-/* Controller Identifiers */
-struct ControllerIdentifiers {
-    static let subCategoryVC                    = "SubCategoryViewController"
-}
-
 /* Set Cell Size */
 struct CellHeightDetails {
     static let cellHeight                       = 80.0
@@ -68,10 +63,10 @@ struct CategoryImages {
 
 
 let keyCategories                               = "categories"
-let keyCategoryId                               = "categoryId"
-let keyMostOrderedProducts                      = "Most OrdeRed Products"
-let keyMostViewedProducts                       = "Most Viewed Products"
-let keyMostSharedProducts                       = "Most Shared Products"
 let keyRankingName                              = "ranking"
 let keyRankings                                 = "rankings"
 let keyProducts                                 = "products"
+let keyOrderedProducts                          = "Most OrdeRed Products"
+let keyViewedProducts                           = "Most Viewed Products"
+let keySharedProducts                           = "Most Shared Products"
+
