@@ -16,7 +16,6 @@ struct WebServiceURL {
 
 // Application Titles
 struct ApplicationTitles {
-    
     static let rankingTitle                     = "Ranking"
     static let categoryTitle                    = "Category"
     static let productTitle                     = "Products"
@@ -24,7 +23,6 @@ struct ApplicationTitles {
 
 // Messages used to display alert
 struct Messages {
-    
     static let internetConnection               = "No internet connection available."
     static let ResponseSuccess                  = "Product fetched successfully."
     static let ResponseFailure                  = "Some error occured. Please try again."
@@ -33,7 +31,6 @@ struct Messages {
 
 // TableView/CollectionView Cell Identifiers
 struct TableViewCellIdentifiers {
-    
     static let categoryTableViewCell             = "categoryTableViewCell"
     static let subCategoryTableViewCell          = "subCategoryTableViewCell"
     static let productListTableViewCell          = "productListTableViewCell"
@@ -61,14 +58,6 @@ struct CategoryImages {
     static let menswear: UIImage                =  #imageLiteral(resourceName: "menswear")
 }
 
-// Set NavigationBar UI
-struct NavigationTheme {
-    
-    static let NavigationBarColor: UIColor = .blue
-    static let NavigationBarTintColor: UIColor = .white
-    static let NavigationTitleColor: UIColor = .white
-}
-
 // Response keys used to parse the repsonse
 let keyCategories                               = "categories"
 let keyRankingName                              = "ranking"
@@ -78,3 +67,9 @@ let keyOrderedProducts                          = "Most OrdeRed Products"
 let keyViewedProducts                           = "Most Viewed Products"
 let keySharedProducts                           = "Most Shared Products"
 
+// Set NavigationBar UI
+struct NavigationTheme {
+    static let NavigationBarColor: UIColor = .blue
+    static let NavigationBarTintColor: UIColor = .white
+    static let NavigationTitleColor: UIColor = .white
+}
