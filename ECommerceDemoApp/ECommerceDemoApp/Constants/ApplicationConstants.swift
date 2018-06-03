@@ -39,6 +39,10 @@ struct TableViewCellIdentifiers {
     static let productListTableViewCell          = "productListTableViewCell"
     static let productDetailInfoCell             = "productDetailInfoCell"
     static let productDetailImageCell            = "productDetailImageCell"
+    static let productDetailColorCell            = "productDetailColorCell"
+    static let productDetailSizeCell             = "productDetailSizeCell"
+    static let productColorCollectionCell        = "productColorCollectionCell"
+    static let productSizeCollectionCell         = "productSizeCollectionCell"
 }
 
 /* Controller Identifiers */
@@ -49,8 +53,10 @@ struct ControllerIdentifiers {
 /* Set Cell Size */
 struct CellHeightDetails {
     static let cellHeight                       = 80.0
-    static let productImageCelllHeight          = 190.0
-    static let productColorCelllHeight          = 80.0
+    static let productImageCelllHeight          = 180.0
+    static let productColorCelllWidth           = 50.0
+    static let productSizeCelllWidth            = 40.0
+    static let productColorCelllHeight          = 95.0
     static let productSizeCelllHeight           = 80.0
 }
 

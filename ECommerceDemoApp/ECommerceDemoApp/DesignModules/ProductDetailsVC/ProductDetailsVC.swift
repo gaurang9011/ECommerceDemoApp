@@ -39,7 +39,6 @@ class ProductDetailsVC: CustomViewController  {
         
         if let color = colors.first {
             currentVariant.color = color
-            
             if let variant = sizes.first {
                 currentVariant.size = variant.size
             }
@@ -51,7 +50,7 @@ class ProductDetailsVC: CustomViewController  {
     
     // This method is used to setup views and subviews.
     func setupUI() {
-        tableView.estimatedRowHeight = 70
+        tableView.estimatedRowHeight = 140
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.tableFooterView = UIView()
     }
@@ -69,7 +68,7 @@ extension ProductDetailsVC: UITableViewDataSource, UITableViewDelegate {
     // TableView DataSource Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 2
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -81,16 +80,32 @@ extension ProductDetailsVC: UITableViewDataSource, UITableViewDelegate {
             cell.setProductImage(category: appDelegate.currentRootCategory?.name ?? (product?.categoryName)!)
             return cell
             
+        } else if indexPath.row == 1 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.productDetailColorCell, for: indexPath) as! ProductDetailColorCell
+            
+            cell.setProductColors(colors: colors, selected: self.currentVariant.color)
+            cell.colorCellDelegate = self
+            return cell
+            
+        } else if indexPath.row == 2 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.productDetailSizeCell, for: indexPath) as! ProductDetailSizeCell
+        
+            cell.setProducSizes(sizes: sizes, selected: currentVariant.size)
+            cell.sizeCellDelegate = self
+            return cell
+            
         } else {
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.productDetailInfoCell, for: indexPath) as! ProductDetailInfoCell
             cell.setProductDetails(details: (product?.product)!, variant: currentVariant)
             return cell
+            
         }
-        
     }
     
     // TableView Delegate Methods
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         switch indexPath.row {
@@ -99,6 +114,12 @@ extension ProductDetailsVC: UITableViewDataSource, UITableViewDelegate {
             return CGFloat(CellHeightDetails.productImageCelllHeight)
             
         case 1:
+            return CGFloat(CellHeightDetails.productColorCelllHeight)
+            
+        case 2:
+            return CGFloat(CellHeightDetails.productSizeCelllHeight)
+            
+        case 3:
             return UITableViewAutomaticDimension
             
         default:
@@ -108,5 +129,28 @@ extension ProductDetailsVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+    }
+}
+
+
+extension ProductDetailsVC: ProductDetailColorCellDelegate {
+    
+    func selectedColor(color: String) {
+        
+        self.currentVariant.color = color
+        if let variant = self.sizes.first {
+            self.currentVariant.size = variant.size
+        } else {
+            self.currentVariant.size = nil
+        }
+        self.tableView.reloadData()
+    }
+}
+
+extension ProductDetailsVC: ProductDetailSizeCellDelegate {
+    
+    func selectedSize(size: Int) {
+        self.currentVariant.size = size
+        self.tableView.reloadData()
     }
 }

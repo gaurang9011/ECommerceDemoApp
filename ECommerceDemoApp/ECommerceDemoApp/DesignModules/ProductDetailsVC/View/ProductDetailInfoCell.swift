@@ -33,10 +33,10 @@ class ProductDetailInfoCell: UITableViewCell {
         
         if let values = details.getPriceForVariant(selectedVariant: variant) {
             
-            self.lblProductPrice.text = "Rs. " + values.0.string
-            self.lblProductTax.text = "Tax" + " " + "Rs. " + values.1.string
-            let sum = values.0.value + values.1.value
-            self.lblFinalPrice.text = "Rs. " + String(sum)
+            self.lblProductPrice.text = "Price: Rs. " + values.0.string
+            self.lblProductTax.text = "Tax: Rs. " + values.1.string
+            let sum = round(values.0.value) + round(values.1.value)
+            self.lblFinalPrice.text = "Total Bill: Rs. " + String(sum)
         }
     }
 }
