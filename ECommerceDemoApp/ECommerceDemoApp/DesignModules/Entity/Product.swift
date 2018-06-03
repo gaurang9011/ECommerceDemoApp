@@ -61,7 +61,7 @@ extension Product {
     }
     
     
-    func getPriceForVariant(selectedVariant: (color: String, size: Int?)) -> ((value: Double, displayString: String), (value: Double, displayString: String))? {
+    func getPriceForVariant(selectedVariant: (color: String, size: Int?)) -> ((value: Double, string: String), (value: Double, string: String))? {
         
         guard Array(variants).count > 0 else {
             return nil
@@ -89,7 +89,7 @@ extension Product {
         return nil
     }
     
-    func getAdditionalTax(variant: ProductVariant) -> (value: Double, displayString: String) {
+    func getAdditionalTax(variant: ProductVariant) -> (value: Double, string: String) {
         
         let taxValue = (variant.price * (tax?.value)!) / 100.0
         return (taxValue, String(format: "%.f", taxValue))

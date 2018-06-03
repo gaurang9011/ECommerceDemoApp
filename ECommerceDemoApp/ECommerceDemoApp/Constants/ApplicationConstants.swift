@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct WebServiceURL {
     
@@ -33,21 +34,32 @@ struct Messages {
 /* Cell Identifiers */
 struct TableViewCellIdentifiers {
     
-    static let categoryTableViewCell                     = "categoryTableViewCell"
-    static let subCategoryTableViewCell                  = "subCategoryTableViewCell"
-    static let productListTableViewCell                  = "productListTableViewCell"
+    static let categoryTableViewCell             = "categoryTableViewCell"
+    static let subCategoryTableViewCell          = "subCategoryTableViewCell"
+    static let productListTableViewCell          = "productListTableViewCell"
+    static let productDetailInfoCell             = "productDetailInfoCell"
+    static let productDetailImageCell            = "productDetailImageCell"
 }
 
 /* Controller Identifiers */
 struct ControllerIdentifiers {
-    
     static let subCategoryVC                    = "SubCategoryViewController"
 }
 
 /* Set Cell Size */
-struct ProductCellDetails {
-    static let cellHeight   = 80.0
+struct CellHeightDetails {
+    static let cellHeight                       = 80.0
+    static let productImageCelllHeight          = 190.0
+    static let productColorCelllHeight          = 80.0
+    static let productSizeCelllHeight           = 80.0
 }
+
+
+struct CategoryImages {
+    static let electronics: UIImage             = #imageLiteral(resourceName: "electronics")
+    static let menswear: UIImage                =  #imageLiteral(resourceName: "menswear")
+}
+
 
 let keyCategories                               = "categories"
 let keyCategoryId                               = "categoryId"

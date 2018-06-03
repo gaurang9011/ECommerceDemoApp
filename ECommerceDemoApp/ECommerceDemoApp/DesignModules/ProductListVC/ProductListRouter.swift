@@ -16,6 +16,7 @@ class ProductListRouter {
     func setProductDetails(product: CategoryProduct) {
         
         let productDetailViewController = UIViewController.productDetailViewController()
+        productDetailViewController.product = product
         viewControllerObject.navigationController?.pushViewController(productDetailViewController, animated: true)
     }
 }
